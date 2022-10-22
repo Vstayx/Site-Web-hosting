@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lasting - Contact</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="style.css" />
+    <link href="/assets/img/unknown.png" rel="icon">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+
+
+    
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Mettons-nous en contact</h3>
+          <p class="text">
+            Afin de nous contacté, veuillez entrez le formulaire suivant
+            Ou, nous contacté via Discord
+          </p>
+
+          
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>lastingheberg@gmail.com</p>
+            </div>
+           
+
+          <div class="social-media">
+            <p>Connectez-vous avec nous :</p>
+            <div class="social-icons">
+              <a href="https://discord.gg/WA9d7AK3">
+                <img class="discord" src="https://img.icons8.com/ios/24/000000/discord-logo.png"/>
+                
+              </a>
+             
+            </div>
+          </div>
+         
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+          
+            <h3 class="title">Contactez-nous</h3>
+            <div class="input-container">
+              <input type="name" id="name" class="input" placeholder=""
+              required data-error="Indiquer votre nom">
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+
+
+            <div class="input-container textarea">
+              <textarea id="message" name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+        
+
+            <form method="post" action="">
+              
+              <button class="btn" onclick="sendMail(); return false">Envoyé votre message</button>
+              <br /> <br /> 
+              <div><a href="https://lastingheberg.com" class="btn zd">Acceuil</a></div>
+          </form>
+           
+          <script language="Javascript" type="text/javascript">
+            function sendMail() {
+               
+                if (document.getElementById("name").value.length==0) {
+                    alert("Saisir votre nom ");
+                    return;
+                }
+
+                if (document.getElementById("message").value.length==0) {
+                    alert("Ecrire le message ");
+                    return;
+                }
+              
+                var url="mailto:lastingheberg@gmail.com"
+                    +"?subject="+encodeURIComponent(document.getElementById("name").value)
+                    +"&body="+encodeURIComponent(document.getElementById("message").value);
+                document.location=url;
+            }
+         
+        </script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+    <script src="app.js"></script>
+  </body>
+</html>
